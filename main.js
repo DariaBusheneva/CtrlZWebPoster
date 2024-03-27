@@ -302,10 +302,13 @@ function addCircle() {
 
 // Функция для удаления кружка при клике
 function removeCircle(event) {
-    const parentElement = event.target.parentElement;
+    const innerCircle = event.target;
+    const parentElement = innerCircle.parentNode;
     if (!parentElement) return; // Проверяем существование родительского элемента
-    parentElement.remove(); // Удаляем родительский элемент
+    parentElement.removeChild(innerCircle); // Удаляем внутренний круг
+    parentElement.removeChild(parentElement.firstChild); // Удаляем внешний круг
   }
+  
 
 // Добавляем новый кружок каждую секунду
 setInterval(addCircle, 1000);

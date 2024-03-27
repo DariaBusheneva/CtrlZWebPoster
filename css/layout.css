@@ -1027,8 +1027,8 @@ canvas {
 
 .inner-circle {
   position: absolute;
-  width: 60%; /* Размер внутреннего круга */
-  height: 60%; /* Размер внутреннего круга */
+  width: 50%; /* Размер внутреннего круга */
+  height: 50%; /* Размер внутреннего круга */
   background-color: #757575; /* Цвет внутреннего круга */
   border-radius: 50%;
   top: 50%;
