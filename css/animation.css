@@ -14,28 +14,41 @@
 }
 
 @keyframes aroundtheworld1 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg); 
-    }
+  0% {
+    transform: rotate(0deg);
   }
-
-  @keyframes aroundtheworld2 {
-    0% {
-      transform: rotate(90deg); 
-    }
-    100% {
-      transform: rotate(450deg); 
-    }
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  @keyframes aroundtheworld3 {
-    0% {
-      transform: rotate(180deg);
+@keyframes aroundtheworld2 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes aroundtheworld3 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+/* Удаляющиеся кружки */
+@keyframes float {
+    0%, 100% {
+      transform: translate(0, 0); /* Начальное и конечное положение */
     }
-    100% {
-      transform: rotate(540deg);
+    50% {
+      transform: translate(-50px, 30px); /* Промежуточное положение */
+    }
+    75% {
+        transform: translate(-80px, 15px); /* Промежуточное положение */
     }
   }

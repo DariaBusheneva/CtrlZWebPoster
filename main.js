@@ -255,3 +255,54 @@ window.addEventListener("resize", function () {
 
 // ----------------------------------------------------------------------------------
 
+// Удаляющиеся кружки
+
+// Функция для добавления нового кружка
+function addCircle() {
+    const circleContainer = document.querySelector(".line-with-rounds");
+    const circle = document.createElement("div");
+    const outerCircle = document.createElement("div");
+    const innerCircle = document.createElement("div");
+  
+    circle.classList.add("round");
+    outerCircle.classList.add("outer-circle");
+    innerCircle.classList.add("inner-circle");
+  
+    const circleSize = 40; // Диаметр круга
+    const containerRect = circleContainer.getBoundingClientRect();
+    const left = Math.random() * (containerRect.width - circleSize);
+    const top = Math.random() * (containerRect.height - circleSize);
+  
+    circle.style.left = `${left}px`;
+    circle.style.top = `${top}px`;
+    circle.appendChild(outerCircle);
+    circle.appendChild(innerCircle);
+    circleContainer.appendChild(circle);
+
+  // Добавляем обработчик событий для удаления круга при клике
+  circle.addEventListener("click", removeCircle);
+
+  // Добавляем случайные значения для изменения позиции
+  setInterval(() => {
+    const deltaX = (Math.random() - 0.5) * 10; // Случайное значение для изменения позиции по горизонтали
+    const deltaY = (Math.random() - 0.5) * -10; // Случайное значение для изменения позиции по вертикали
+    const circleRect = circle.getBoundingClientRect();
+    const newLeft = circleRect.left + deltaX;
+    const newTop = circleRect.top + deltaY;
+    // Проверяем, чтобы круг не выходил за границы блока
+    // if (newLeft >= 0 && newLeft + circleSize <= containerRect.width) {
+    //   circle.style.left = `${newLeft}px`;
+    // }
+    // if (newTop >= 0 && newTop + circleSize <= containerRect.height) {
+    //   circle.style.top = `${newTop}px`;
+    // }
+  }, 2500); // Обновляем позицию каждые 0.5 секунды
+}
+
+// Функция для удаления кружка при клике
+function removeCircle(event) {
+  event.target.parentElement.remove();
+}
+
+// Добавляем новый кружок каждую секунду
+setInterval(addCircle, 1000);
