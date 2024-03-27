@@ -260,6 +260,7 @@ window.addEventListener("resize", function () {
 // Функция для добавления нового кружка
 function addCircle() {
     const circleContainer = document.querySelector(".line-with-rounds");
+    if (!circleContainer) return; // Проверяем существование контейнера
     const circle = document.createElement("div");
     const outerCircle = document.createElement("div");
     const innerCircle = document.createElement("div");
@@ -301,8 +302,10 @@ function addCircle() {
 
 // Функция для удаления кружка при клике
 function removeCircle(event) {
-  event.target.parentElement.remove();
-}
+    const parentElement = event.target.parentElement;
+    if (!parentElement) return; // Проверяем существование родительского элемента
+    parentElement.remove(); // Удаляем родительский элемент
+  }
 
 // Добавляем новый кружок каждую секунду
 setInterval(addCircle, 1000);
