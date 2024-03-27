@@ -1,0 +1,41 @@
+@keyframes printed_text {
+  0% {
+    opacity: 0;
+  }
+  16.667% {
+    opacity: 0;
+  }
+  16.668% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aroundtheworld1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+  }
+
+  @keyframes aroundtheworld2 {
+    0% {
+      transform: rotate(90deg); 
+    }
+    100% {
+      transform: rotate(450deg); 
+    }
+  }
+
+  @keyframes aroundtheworld3 {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(540deg);
+    }
+  }

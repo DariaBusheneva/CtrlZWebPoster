@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Helvetica_bold"; /* название шрифта */
+    src: url(../font/helvetica_bold.otf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_boldlique"; /* название шрифта */
+    src: url(../font/helvetica_boldoblique.otf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_cyr_boldolique"; /* название шрифта */
+    src: url(../font/helvetica_cyr_boldoblique.ttf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_cyr_lique"; /* название шрифта */
+    src: url(../font/helvetica_cyr_oblique.ttf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_light"; /* название шрифта */
+    src: url(../font/helvetica_light.otf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_light_oblique"; /* название шрифта */
+    src: url(../font/helvetica_lightoblique.otf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_oblique"; /* название шрифта */
+    src: url(../font/helvetica_oblique.otf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_oblique"; /* название шрифта */
+    src: url(../font/helvetica_oblique.otf); /* ссылка на файл */
+  }
+  
+  @font-face {
+    font-family: "Helvetica_regular"; /* название шрифта */
+    src: url(../font/helvetica_regular.otf); /* ссылка на файл */
+  }
