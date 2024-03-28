@@ -370,15 +370,133 @@ sliders.forEach(function (slider) {
 
 // --------------------------------------------------------------------------------------------------------
 
-// Переворачивающиеся по клику палочки
+// Переворачивающиеся по клику палочки-соединители
 
 document.getElementById("rotateline1").addEventListener("click", function () {
-  this.classList.toggle("flip-line"); // Переключаем класс при каждом клике
+  this.classList.toggle("flip-line");
 });
 
 document.getElementById("rotateline2").addEventListener("click", function () {
-  this.classList.toggle("flip-line"); // Переключаем класс при каждом клике
+  this.classList.toggle("flip-line");
 });
 document.getElementById("rotateline3").addEventListener("click", function () {
-  this.classList.toggle("flip-line"); // Переключаем класс при каждом клике
+  this.classList.toggle("flip-line");
 });
+
+// --------------------------------------------------------------------------------------------------------
+
+// Еще одни переворачивающиеся по клику палочки-соединители
+document
+  .getElementById("rotateconnector1")
+  .addEventListener("click", function () {
+    this.classList.toggle("flip-line");
+  });
+
+document
+  .getElementById("rotateconnector2")
+  .addEventListener("click", function () {
+    this.classList.toggle("flip-line");
+  });
+document
+  .getElementById("rotateconnector3")
+  .addEventListener("click", function () {
+    this.classList.toggle("flip-connector");
+  });
+
+document
+  .getElementById("rotateconnector5")
+  .addEventListener("click", function () {
+    this.classList.toggle("flip-connector");
+  });
+
+// --------------------------------------------------------------------------------------------------------
+
+// Появление коннекторов
+document.addEventListener("DOMContentLoaded", function () {
+  const kubik = document.getElementById("square1_3");
+
+  kubik.addEventListener("click", function () {
+    kubik.style.backgroundImage = "url(images/connect.svg)";
+    kubik.style.width = "68%"; // Пример установки ширины
+    kubik.style.height = "103%"; // Пример установки высоты
+    kubik.style.transform = "translate(49%, 3%) rotate(-90deg)";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const kubik = document.getElementById("square2_3");  
+    kubik.addEventListener("click", function () {
+      kubik.style.backgroundImage = "url(images/connect.svg)";
+      kubik.style.width = "68%"; // Пример установки ширины
+      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.transform = "translate(49%, 3%) rotate(-90deg)";
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const kubik = document.getElementById("square3_3");  
+    kubik.addEventListener("click", function () {
+      kubik.style.backgroundImage = "url(images/connect.svg)";
+      kubik.style.width = "68%"; // Пример установки ширины
+      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.transform = "translate(24%, 20%)";
+    });
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const kubik = document.getElementById("square4_3");  
+    kubik.addEventListener("click", function () {
+      kubik.style.backgroundImage = "url(images/connect.svg)";
+      kubik.style.width = "68%"; // Пример установки ширины
+      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.transform = "translate(24%, -13%) rotate(180deg)";
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const kubik = document.getElementById("square5_3");
+    const letterB = document.getElementById("letterB");
+  
+    kubik.addEventListener("click", function () {
+      kubik.style.backgroundImage = "url(images/connect.svg)";
+      kubik.style.width = "68%"; // Пример установки ширины
+      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.transform = "translate(24%, 20%)";
+      letterB.style.height = "56%"
+      letterB.style.transform = "translate(0px, -29%)"
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const kubik = document.getElementById("square6_3");  
+    kubik.addEventListener("click", function () {
+      kubik.style.backgroundImage = "url(images/connect.svg)";
+      kubik.style.width = "68%"; 
+      kubik.style.height = "103%"; 
+      kubik.style.transform = "translate(-1%, 3%) rotate(90deg)";
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const kubik = document.getElementById("square7_3"); 
+    const letterA = document.getElementById("letterA"); 
+    kubik.addEventListener("click", function () {
+      kubik.style.backgroundImage = "url(images/connect.svg)";
+      kubik.style.width = "68%"; 
+      kubik.style.height = "103%"; 
+      kubik.style.transform = "translate(25%, -14%) rotate(180deg)";
+      letterA.style.height = "56%"
+      letterA.style.transform = "translate(0px, -29%) rotate(180deg)"
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const kubik = document.getElementById("square8_3");  
+    kubik.addEventListener("click", function () {
+      kubik.style.backgroundImage = "url(images/connect.svg)";
+      kubik.style.width = "68%"; 
+      kubik.style.height = "103%"; 
+      kubik.style.transform = "translate(49%, 4%) rotate(-90deg)";
+    });
+  });
