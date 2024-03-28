@@ -34,7 +34,7 @@ section:first-of-type {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
   position: relative;
 }
@@ -44,12 +44,67 @@ section:first-of-type {
   margin-top: 0.5%;
   margin-left: 0.5%;
   aspect-ratio: 1.5;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: space-between;
-  border: #757575 4px solid;
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  /* align-content: space-between; */
+  border: #757575 3px solid;
   border-radius: 5px;
   position: absolute;
+}
+
+.arrows_and_cloud {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background: url(../images/arrowsAndCloud.svg) center / contain no-repeat;
+  position: relative;
+  height: 74%;
+  width: 100%;
+  top: 13%;
+  /* left: 52%; */
+  max-height: 100%;
+  max-width: 100%;
+  bottom: 0;
+}
+
+.eei-letter {
+  display: flex; /* Используем flex-контейнер */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  position: absolute;
+  height: 10%;
+  width: 14%;
+  top: 35%;
+  left: 10%;
+  max-height: 100%;
+  max-width: 100%;
+  bottom: 0;
+  transform: translate(28%, 20%);
+  color: #757575;
+  font-family: "Helvetica_bold";
+  font-size: 1vw;
+  text-align: center;
+  transform: rotate(75deg);
+}
+
+.error-letter {
+  display: flex; /* Используем flex-контейнер */
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  position: absolute;
+  height: 10%;
+  width: 10%;
+  top: 47%;
+  left: 43%;
+  max-height: 100%;
+  max-width: 100%;
+  /* bottom: 0; */
+  transform: translate(28%, 20%);
+  /* width: 31ch; */
+  color: #757575;
+  font-family: "Helvetica_bold";
+  font-size: 3.5vw;
+  text-align: center;
 }
 
 /* .first-section {
@@ -77,7 +132,7 @@ section:first-of-type {
   /* background-color: #757575; */
   margin: 1.5vw;
   border: 10px solid transparent;
-  box-shadow: 0 0 0 5px #757575;
+  box-shadow: 0 0 0 4px #757575;
 }
 
 .nails-inside {
@@ -114,7 +169,7 @@ section:nth-of-type(2) {
 .firstdiv {
   width: calc(64% - (var(--padding-border) / 2));
   height: calc(50% - (var(--padding-border) / 2));
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
@@ -127,7 +182,7 @@ section:nth-of-type(2) {
   height: 96%;
   left: 0.5%;
   top: 2%;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* align-content: space-between; */
@@ -140,7 +195,7 @@ section:nth-of-type(2) {
 .two-buttons {
   height: 76%;
   width: 112%;
-  border: 4px #757575 solid;
+  border: 3px #757575 solid;
   border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -157,7 +212,7 @@ section:nth-of-type(2) {
   left: 0.5%;
   top: 2%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 5px;
@@ -221,9 +276,9 @@ section:nth-of-type(2) {
   top: calc(2vw - 1px);
   right: calc(((var(--padding-border) + 4.7vw) * -1) + 2vw);
   bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -235,9 +290,9 @@ section:nth-of-type(2) {
   content: "";
   bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw);
   left: calc(0.4vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -250,7 +305,7 @@ section:nth-of-type(2) {
 .seconddiv {
   width: calc(64% - (var(--padding-border) / 2));
   height: calc(50% - (var(--padding-border) / 2));
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
@@ -263,9 +318,9 @@ section:nth-of-type(2) {
   content: "";
   bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw);
   left: calc(0.8vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -279,7 +334,7 @@ section:nth-of-type(2) {
   left: 0.5%;
   top: 2%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-radius: 5px;
@@ -293,7 +348,7 @@ section:nth-of-type(2) {
   height: 17vw;
   border-radius: 50%;
   position: relative; /* Позиционируем относительно родительского элемента */
-  border: #757575 4px solid;
+  border: #757575 3px solid;
 }
 
 .circle2 {
@@ -303,7 +358,7 @@ section:nth-of-type(2) {
   left: 2%;
   border-radius: 50%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: flex;
   justify-content: center;
   align-items: center; /* Выравнивание по центру */
@@ -333,21 +388,23 @@ section:nth-of-type(2) {
   animation: aroundtheworld3 5s linear infinite;
 }
 
+
 .circle2::before {
   content: "";
   position: absolute;
-  width: calc(100% - 20px); /* Учитываем ширину границы */
-  height: calc(100% - 20px); /* Учитываем ширину границы */
+  width: calc(100% - 20px); 
+  height: calc(100% - 20px); 
   border-radius: 50%;
   border: 4px dashed #757575;
   animation: aroundtheworld1 5.25s linear infinite;
+  z-index: 2;
 }
 
 /* --------------- */
 
 .thirddiv {
   width: calc(36% - (var(--padding-border) / 2));
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -389,7 +446,7 @@ section:nth-of-type(2) {
   width: 69%;
   top: 13%;
   left: 16.5%;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
 }
 
@@ -402,7 +459,7 @@ section:nth-of-type(2) {
   top: 0.5%;
   left: 0.5%;
   overflow: hidden;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
 }
 
@@ -437,9 +494,9 @@ section:nth-of-type(2) {
   position: absolute;
   bottom: calc(((var(--padding-border) + 3vw) * -1) + 2vw);
   right: calc(0.3vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -454,7 +511,7 @@ section:nth-of-type(2) {
   left: 1%;
   top: 0.5%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
@@ -474,7 +531,7 @@ section:nth-of-type(2) .popup {
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
   z-index: 2;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
 }
 
@@ -489,7 +546,7 @@ section:nth-of-type(2) .popup {
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
   z-index: 2;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
 }
 
@@ -581,7 +638,7 @@ section:nth-of-type(3) {
   justify-content: space-between;
   aspect-ratio: 3.7;
   width: 100%;
-  height: 45vh;
+  height: 50vh;
   max-height: 100%;
   max-width: 100%;
 }
@@ -589,7 +646,7 @@ section:nth-of-type(3) span {
   display: block;
   height: 100%;
   width: calc((100% - (var(--padding-border) * 3)) * 0.283);
-  border: 4px #757575 solid;
+  border: 3px #757575 solid;
   border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -602,9 +659,9 @@ section:nth-of-type(3) span:nth-of-type(2)::after {
   top: calc(1.8vw - 1px);
   left: calc(((var(--padding-border) + 9.1vw) * 1));
   /* bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw); */
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -617,9 +674,9 @@ section:nth-of-type(3) span:nth-of-type(2)::before {
   content: "";
   bottom: calc(((var(--padding-border) + 1.1vw) * -1) + 2vw);
   left: calc(11.2vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -633,9 +690,9 @@ section:nth-of-type(3) span:nth-of-type(3)::after {
   top: calc(2vw - 1px);
   left: calc(((var(--padding-border) + 36.6vw) * 1));
   bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -648,9 +705,9 @@ section:nth-of-type(3) span:nth-of-type(3)::before {
   content: "";
   bottom: calc(((var(--padding-border) + 1.1vw) * -1) + 2vw);
   left: calc(38.7vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -663,9 +720,9 @@ section:nth-of-type(3) span:nth-of-type(4)::before {
   content: "";
   bottom: calc(((var(--padding-border) + 1.1vw) * -1) + 2vw);
   left: calc(66.2vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -676,7 +733,7 @@ section:nth-of-type(3) span:nth-of-type(4)::before {
 section:nth-of-type(3) span:first-of-type {
   height: 100%;
   width: calc((100% - (var(--padding-border) * 3)) * 0.15);
-  border: 4px #757575 solid;
+  border: 3px #757575 solid;
   border-radius: 5px;
 }
 
@@ -685,9 +742,9 @@ section:nth-of-type(3) span:first-of-type::before {
   content: "";
   bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw);
   left: calc(0.6vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -695,17 +752,92 @@ section:nth-of-type(3) span:first-of-type::before {
   transform: rotate(90deg);
 }
 
+/* Слайдер */
+
 .border-rowitem {
   width: 13%;
   height: 97%;
-  left: 0.5%;
+  left: 0.55%;
   top: 1.5%;
   position: absolute;
-  border: #757575 4px solid;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: space-between;
+  border: #757575 3px solid;
+  /* display: grid; */
+  /* Установим 7 строк */
+  /* grid-template-rows: repeat(7, 1fr); */
+  /* Теперь колонка будет одна, а строки будут 7 */
+  /* grid-template-columns: 1fr; */
+  /* Убираем выравнивание содержимого между строками */
+  /* align-content: unset; */
+  /* Убираем отступы между прямоугольниками */
+  /* grid-gap: 0; */
   border-radius: 5px;
+}
+
+.border-rowitem-inside {
+  width: 100%;
+  height: 77%;
+  /* left: 0.55%; */
+  top: 11.5%;
+  position: absolute;
+  /* border: #757575 4px solid; */
+  display: grid;
+  /* Установим 7 строк */
+  grid-template-rows: repeat(7, 1fr);
+  /* Теперь колонка будет одна, а строки будут 7 */
+  grid-template-columns: 1fr;
+  /* Убираем выравнивание содержимого между строками */
+  align-content: unset;
+  /* Убираем отступы между прямоугольниками */
+  grid-gap: 0;
+  /* border-radius: 5px; */
+}
+
+.rectangle {
+  /* Ширина 100%, чтобы занимать всю ширину колонки */
+  width: 100%;
+  /* Одинаковая высота для каждого прямоугольника */
+  height: 100%;
+  /* border-bottom: 4px solid red; */
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  height: 37%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: #cbcbcb;
+  border: #757575 3px solid;
+  border-radius: 6px;
+}
+
+.plugin {
+  /* background-image: url("src/img/plug_in_1.svg"); */
+  width: 10%;
+  height: 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.plugout {
+  background-image: url("../images/roundWithCrossMove.svg");
+  width: 18%;
+  height: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+/* Убираем нижнюю границу у последнего прямоугольника */
+.rectangle:last-child {
+  border-bottom: none;
 }
 
 .border-rowitem2 {
@@ -714,11 +846,27 @@ section:nth-of-type(3) span:first-of-type::before {
   left: 16.7%;
   top: 1.5%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: space-between;
-  border-radius: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  /* align-content: space-between; */
+  /* border-radius: 5px; */
+  grid-gap: 0;
+}
+
+.square1 {
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid #757575;
+  border-bottom: 3px solid #757575;
+}
+
+.square1:nth-child(3n) {
+  border-right: none;
+}
+
+.square1:nth-last-child(-n + 3) {
+  border-bottom: none;
 }
 
 .border-rowitem3 {
@@ -727,11 +875,27 @@ section:nth-of-type(3) span:first-of-type::before {
   height: 97%;
   top: 1.5%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  /* align-content: space-between; */
   border-radius: 5px;
+  grid-gap: 0;
+}
+
+.square2 {
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid red;
+  border-bottom: 3px solid red;
+}
+
+.square2:nth-child(3n) {
+  border-right: none;
+}
+
+.square2:nth-last-child(-n + 3) {
+  border-bottom: none;
 }
 
 .border-rowitem4 {
@@ -740,11 +904,27 @@ section:nth-of-type(3) span:first-of-type::before {
   height: 97%;
   top: 1.5%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  /* align-content: space-between; */
   border-radius: 5px;
+  grid-gap: 0;
+}
+
+.square3 {
+  width: 100%;
+  height: 100%;
+  border-right: 3px solid #757575;
+  border-bottom: 3px solid #757575;
+}
+
+.square3:nth-child(3n) {
+  border-right: none;
+}
+
+.square3:nth-last-child(-n + 3) {
+  border-bottom: none;
 }
 
 section:nth-of-type(4) {
@@ -767,7 +947,7 @@ section:nth-of-type(4) {
   height: 96%;
   left: 0.5%;
   top: 2%;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   /* display: grid; */
   /* grid-template-columns: repeat(2, 1fr); */
   /* align-content: space-between; */
@@ -835,7 +1015,7 @@ canvas {
 .seconddiv2 {
   width: calc(64% - (var(--padding-border) / 2));
   height: calc(50% - (var(--padding-border) / 2));
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
@@ -848,9 +1028,9 @@ canvas {
   content: "";
   bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw);
   left: calc(0.2vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -864,7 +1044,7 @@ canvas {
   height: 17vw;
   border-radius: 50%;
   position: relative;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   transition: transform 0.5s ease; /* Добавляем переход для плавного изменения трансформации */
   display: flex;
   justify-content: center;
@@ -881,13 +1061,13 @@ canvas {
   left: 2%;
   border-radius: 50%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   transition: transform 0.5s ease;
 }
 
 .flip {
   transform: rotateY(180deg);
-  border: 4px solid #cbcbcb;
+  border: 3px solid #cbcbcb;
 }
 
 .flip .second-circle1 {
@@ -908,7 +1088,7 @@ canvas {
   height: 17vw;
   border-radius: 50%;
   position: relative;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   transition: transform 0.5s ease; /* Добавляем переход для плавного изменения трансформации */
   display: flex;
   justify-content: center;
@@ -925,7 +1105,7 @@ canvas {
   left: 2%;
   border-radius: 50%;
   position: absolute;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   transition: transform 0.5s ease;
 }
 
@@ -939,7 +1119,7 @@ canvas {
 }
 
 .flip1 .second-circle2_1 {
-  background: url(../images/goBack.svg) center / contain no-repeat;
+  background: url(../images/again.svg) center / contain no-repeat;
   max-height: 100%;
   max-width: 100%;
   bottom: 0;
@@ -951,7 +1131,7 @@ canvas {
 
 .thirddiv2 {
   width: calc(36% - (var(--padding-border) / 2));
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -964,9 +1144,9 @@ canvas {
   position: absolute;
   bottom: calc(((var(--padding-border) + 3vw) * -1) + 2vw);
   right: calc(0.2vw - 1px);
-  border-top: 0.25vw solid #757575;
-  border-left: 0.25vw solid #757575;
-  border-right: 0.25vw solid #757575;
+  border-top: 0.2vw solid #757575;
+  border-left: 0.2vw solid #757575;
+  border-right: 0.2vw solid #757575;
   height: 3.3vw;
   border-top-left-radius: 4vw;
   border-top-right-radius: 4vw;
@@ -983,7 +1163,7 @@ canvas {
   width: 69%;
   top: 13%;
   left: 16.5%;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
   overflow: hidden; /* Обрезать лишние кружки, которые выходят за пределы блока */
 }
@@ -995,7 +1175,7 @@ canvas {
   top: 0.5%;
   left: 0.5%;
   /* overflow: hidden; */
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
 }
 
@@ -1020,7 +1200,7 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 4px solid #757575; /* Стиль внешнего круга */
+  border: 3px solid #757575; /* Стиль внешнего круга */
   border-radius: 50%;
   /* box-sizing: border-box; */
 }
@@ -1040,26 +1220,26 @@ canvas {
 
 section:nth-of-type(5) {
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   aspect-ratio: 1.5;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
   position: relative;
 }
 
 .second-border-last-section {
   width: 99.2%;
-  height: 98%;
+  height: 96%;
   margin-top: 0.3%;
   margin-left: 0.4%;
   aspect-ratio: 1.5;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
-  border: #757575 4px solid;
+  border: #757575 3px solid;
   border-radius: 5px;
   position: absolute;
 }

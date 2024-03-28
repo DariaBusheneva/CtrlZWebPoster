@@ -1,7 +1,7 @@
 // Падающий текст
 const letterSpeed = 2;
 const container = document.getElementById("letter-container");
-const spawnDuration = 2 * 1000; // 1 second
+const spawnDuration = 2000;
 
 let startTime = Date.now();
 let engine,
@@ -9,7 +9,7 @@ let engine,
   render,
   circles = [];
 
-const letters = "CTRLZ^&%(*!@£#;%?>)"; // Add more letters if needed
+const letters = "CTRLZ!+"; // Add more letters if needed
 
 function createCircle(x, y) {
   const circle = document.createElement("div");
@@ -39,11 +39,14 @@ function setupMatter() {
       background: "#CBCBCB",
     },
   });
+
+  // Установка гравитации и коэффициента упругости
+  world.gravity.y = 0.2; // Уменьшаем гравитацию для уменьшения скорости падения
 }
 
 function updatePosition(circle, body) {
-  circle.style.left = `${body.position.x - circle.clientWidth / 2}px`;
-  circle.style.top = `${body.position.y - circle.clientHeight / 2}px`;
+  circle.style.left = `${body.position.x - circle.clientWidth / 1}px`;
+  circle.style.top = `${body.position.y - circle.clientHeight / 1}px`;
 }
 
 function update() {
@@ -256,29 +259,32 @@ window.addEventListener("resize", function () {
 // ----------------------------------------------------------------------------------
 
 // Удаляющиеся кружки
-
+let circleCount = 0; // Счетчик созданных кружков
+const maxCircles = 40; // Максимальное количество кружков
 // Функция для добавления нового кружка
 function addCircle() {
-    const circleContainer = document.querySelector(".line-with-rounds");
-    if (!circleContainer) return; // Проверяем существование контейнера
-    const circle = document.createElement("div");
-    const outerCircle = document.createElement("div");
-    const innerCircle = document.createElement("div");
-  
-    circle.classList.add("round");
-    outerCircle.classList.add("outer-circle");
-    innerCircle.classList.add("inner-circle");
-  
-    const circleSize = 40; // Диаметр круга
-    const containerRect = circleContainer.getBoundingClientRect();
-    const left = Math.random() * (containerRect.width - circleSize);
-    const top = Math.random() * (containerRect.height - circleSize);
-  
-    circle.style.left = `${left}px`;
-    circle.style.top = `${top}px`;
-    circle.appendChild(outerCircle);
-    circle.appendChild(innerCircle);
-    circleContainer.appendChild(circle);
+  if (circleCount >= maxCircles) return; // Проверяем, достигнут ли предел кружков
+  circleCount++; // Увеличиваем счетчик
+  const circleContainer = document.querySelector(".line-with-rounds");
+  if (!circleContainer) return; // Проверяем существование контейнера
+  const circle = document.createElement("div");
+  const outerCircle = document.createElement("div");
+  const innerCircle = document.createElement("div");
+
+  circle.classList.add("round");
+  outerCircle.classList.add("outer-circle");
+  innerCircle.classList.add("inner-circle");
+
+  const circleSize = 40; // Диаметр круга
+  const containerRect = circleContainer.getBoundingClientRect();
+  const left = Math.random() * (containerRect.width - circleSize);
+  const top = Math.random() * (containerRect.height - circleSize);
+
+  circle.style.left = `${left}px`;
+  circle.style.top = `${top}px`;
+  circle.appendChild(outerCircle);
+  circle.appendChild(innerCircle);
+  circleContainer.appendChild(circle);
 
   // Добавляем обработчик событий для удаления круга при клике
   circle.addEventListener("click", removeCircle);
@@ -290,25 +296,74 @@ function addCircle() {
     const circleRect = circle.getBoundingClientRect();
     const newLeft = circleRect.left + deltaX;
     const newTop = circleRect.top + deltaY;
-    // Проверяем, чтобы круг не выходил за границы блока
-    // if (newLeft >= 0 && newLeft + circleSize <= containerRect.width) {
-    //   circle.style.left = `${newLeft}px`;
-    // }
-    // if (newTop >= 0 && newTop + circleSize <= containerRect.height) {
-    //   circle.style.top = `${newTop}px`;
-    // }
   }, 2500); // Обновляем позицию каждые 0.5 секунды
 }
 
 // Функция для удаления кружка при клике
 function removeCircle(event) {
-    const innerCircle = event.target;
-    const parentElement = innerCircle.parentNode;
-    if (!parentElement) return; // Проверяем существование родительского элемента
-    parentElement.removeChild(innerCircle); // Удаляем внутренний круг
-    parentElement.removeChild(parentElement.firstChild); // Удаляем внешний круг
-  }
-  
+  const innerCircle = event.target;
+  const parentElement = innerCircle.parentNode;
+  if (!parentElement) return; // Проверяем существование родительского элемента
+  parentElement.removeChild(innerCircle); // Удаляем внутренний круг
+  parentElement.removeChild(parentElement.firstChild); // Удаляем внешний круг
+}
 
 // Добавляем новый кружок каждую секунду
 setInterval(addCircle, 1000);
+
+// --------------------------------------------------------------------------------------------------------
+
+// Слайдер
+var sliders = document.querySelectorAll(".slider");
+
+sliders.forEach(function (slider) {
+  var out1 = slider.querySelector(".plugout");
+  var sliderRect = slider.getBoundingClientRect();
+
+  // Генерация случайного положения plugout только по горизонтали
+  var randomLeft = Math.random() * (sliderRect.width - out1.offsetWidth);
+  out1.style.left =
+    Math.max(
+      20,
+      Math.min(randomLeft, sliderRect.width - out1.offsetWidth - 20)
+    ) + "px";
+  out1.style.top = "15%";
+
+  out1.addEventListener("mousedown", down);
+
+  function down(e) {
+    document.addEventListener("mousemove", move);
+    document.addEventListener("mouseup", up);
+  }
+
+  function move(e) {
+    out1.style.position = "absolute";
+    updatePosition(e.clientX);
+  }
+
+  function updatePosition(clientX) {
+    var sliderRect = slider.getBoundingClientRect();
+    var newLeft = clientX - sliderRect.left;
+    // var newLeft = sliderRect.width - out1.offsetWidth + 20;
+    var rightLimit = sliderRect.width - out1.offsetWidth + 20;
+    // var leftLimit = 20;
+
+    // Проверка, чтобы plugout не выезжал за пределы слайдера справа
+    if (newLeft <= 12) {
+      out1.style.left = 12 + "px";
+    }
+    // Проверка, чтобы plugout не выезжал за пределы слайдера слева
+    else if (newLeft >= rightLimit) {
+      out1.style.left = rightLimit + "px";
+    }
+    // В противном случае позволяется перемещение plugout
+    else {
+      out1.style.left = newLeft - out1.offsetWidth / 2 + "px";
+    }
+  }
+
+  function up() {
+    document.removeEventListener("mousemove", move);
+    document.removeEventListener("mouseup", up);
+  }
+});
