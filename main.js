@@ -94,8 +94,8 @@ function animateCircles() {
 
 function stackCircles() {
   for (const { circle, body } of circles) {
-    if (body.position.y >= container.clientHeight - circle.clientHeight / 2) {
-      body.position.y = container.clientHeight - circle.clientHeight / 2;
+    if (body.position.y >= container.clientHeight - circle.clientHeight / -10) {
+      body.position.y = container.clientHeight - circle.clientHeight / -10;
       body.velocity.y = 0;
     }
   }
@@ -366,4 +366,19 @@ sliders.forEach(function (slider) {
     document.removeEventListener("mousemove", move);
     document.removeEventListener("mouseup", up);
   }
+});
+
+// --------------------------------------------------------------------------------------------------------
+
+// Переворачивающиеся по клику палочки
+
+document.getElementById("rotateline1").addEventListener("click", function () {
+  this.classList.toggle("flip-line"); // Переключаем класс при каждом клике
+});
+
+document.getElementById("rotateline2").addEventListener("click", function () {
+  this.classList.toggle("flip-line"); // Переключаем класс при каждом клике
+});
+document.getElementById("rotateline3").addEventListener("click", function () {
+  this.classList.toggle("flip-line"); // Переключаем класс при каждом клике
 });
