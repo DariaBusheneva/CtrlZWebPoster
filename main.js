@@ -1,3 +1,53 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//     const circleContainer = document.querySelector(".circle-container");
+  
+//     function addCircle() {
+//       const circle = document.createElement("div");
+//       circle.classList.add("circle");
+//       circle.style.left = `${Math.random() * 100}%`; 
+//       circle.style.top = `${Math.random() * 100}%`; 
+//       circleContainer.appendChild(circle);
+  
+
+//       setTimeout(() => {
+//         circleContainer.removeChild(circle);
+//       }, 10000);
+//     }
+
+//     setInterval(addCircle, 100); 
+//   });
+  
+// ----------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+    const arrowsAndCloud = document.getElementById("arrows_and_cloud");
+    const leftController = document.getElementById("left-controller");
+    const rightController = document.getElementById("right-controller");
+  
+    arrowsAndCloud.addEventListener("click", function() {
+      moveControllers();
+    });
+  
+    function moveControllers() {
+      leftController.style.transition = "left 1s ease-in-out";
+      leftController.style.left = "5%";
+  
+      rightController.style.transition = "left 1s ease-in-out";
+      rightController.style.left = "65%"; 
+
+      leftController.addEventListener("transitionend", function() {
+        leftController.style.transition = "left 1s ease-in-out"; 
+        leftController.style.left = "11%"; 
+      });
+  
+      rightController.addEventListener("transitionend", function() {
+        rightController.style.transition = "left 1s ease-in-out";
+        rightController.style.left = "60%"; 
+      });
+    }
+  });
+ // ----------------------------------------------------------------------------------
+ 
+
 // Падающий текст
 const letterSpeed = 2;
 const container = document.getElementById("letter-container");
@@ -317,7 +367,7 @@ setInterval(addCircle, 1000);
 var sliders = document.querySelectorAll(".slider");
 
 sliders.forEach(function (slider) {
-  var out1 = slider.querySelector(".plugout");
+  var out1 = slider.querySelector(".plugout, .plugout2");
   var sliderRect = slider.getBoundingClientRect();
 
   // Генерация случайного положения plugout только по горизонтали
@@ -327,7 +377,7 @@ sliders.forEach(function (slider) {
       20,
       Math.min(randomLeft, sliderRect.width - out1.offsetWidth - 20)
     ) + "px";
-  out1.style.top = "15%";
+  out1.style.top = "13%";
 
   out1.addEventListener("mousedown", down);
 
