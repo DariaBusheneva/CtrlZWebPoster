@@ -55,12 +55,12 @@
 /* Удаляющиеся кружки */
 @keyframes float {
     0%, 100% {
-      transform: translate(0, 0); /* Начальное и конечное положение */
+      transform: translate(0, 0); 
     }
     50% {
-      transform: translate(-50px, 30px); /* Промежуточное положение */
+      transform: translate(-50px, 30px); 
     }
     75% {
-        transform: translate(-80px, 15px); /* Промежуточное положение */
+        transform: translate(-80px, 15px); 
     }
   }

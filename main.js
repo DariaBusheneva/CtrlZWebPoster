@@ -1,21 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     const circleContainer = document.querySelector(".circle-container");
-  
-//     function addCircle() {
-//       const circle = document.createElement("div");
-//       circle.classList.add("circle");
-//       circle.style.left = `${Math.random() * 100}%`; 
-//       circle.style.top = `${Math.random() * 100}%`; 
-//       circleContainer.appendChild(circle);
-  
-
-//       setTimeout(() => {
-//         circleContainer.removeChild(circle);
-//       }, 10000);
-//     }
-
-//     setInterval(addCircle, 100); 
-//   });
   
 // ----------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function() {
@@ -59,7 +41,7 @@ let engine,
   render,
   circles = [];
 
-const letters = "CTRLZ!+"; // Add more letters if needed
+const letters = "CTRLZ!+"; 
 
 function createCircle(x, y) {
   const circle = document.createElement("div");
@@ -90,8 +72,8 @@ function setupMatter() {
     },
   });
 
-  // Установка гравитации и коэффициента упругости
-  world.gravity.y = 0.2; // Уменьшаем гравитацию для уменьшения скорости падения
+  
+  world.gravity.y = 0.2;
 }
 
 function updatePosition(circle, body) {
@@ -129,7 +111,7 @@ function runPhysics() {
     const pairs = event.pairs;
 
     for (const pair of pairs) {
-      // Handle collisions here if needed
+      // Handle collisions here maybe
     }
   });
 }
@@ -166,9 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const kubik1 = document.getElementById("kubikON");
   const lighters = document.getElementById("lighters");
 
-  // Добавляем обработчик события клика по кубику
+
   kubik1.addEventListener("click", function () {
-    // Меняем фоновое изображение другого div при клике на кубик
+
     lighters.style.backgroundImage = "url(images/lightOn.svg)";
   });
 });
@@ -177,9 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const kubik1 = document.getElementById("kubikOFF");
   const lighters = document.getElementById("lighters");
 
-  // Добавляем обработчик события клика по кубику
+
   kubik1.addEventListener("click", function () {
-    // Меняем фоновое изображение другого div при клике на кубик
+
     lighters.style.backgroundImage = "url(images/lightDarker.svg)";
   });
 });
@@ -189,39 +171,34 @@ document.addEventListener("DOMContentLoaded", function () {
 // Переворачивающиеся круги
 
 document.getElementById("coin1").addEventListener("click", function () {
-  this.classList.toggle("flip"); // Переключаем класс при каждом клике
+  this.classList.toggle("flip"); 
 });
 
 document.getElementById("coin2").addEventListener("click", function () {
-  this.classList.toggle("flip1"); // Переключаем класс при каждом клике
+  this.classList.toggle("flip1"); 
 });
 document.getElementById("coin3").addEventListener("click", function () {
-  this.classList.toggle("flip"); // Переключаем класс при каждом клике
+  this.classList.toggle("flip"); 
 });
 
 // ----------------------------------------------------------------------------------
 
 // Рисующийся график
 
-// Get the canvas element
-var canvas = document.querySelector("#plot");
-var ctx = canvas.getContext("2d");
+let canvas = document.querySelector("#plot");
+let ctx = canvas.getContext("2d");
 
-// Define the function
 function f(x) {
-  // Solve for y using numerical methods (e.g., Newton's method)
   return x * Math.sin(Math.log(x));
 }
 
-// Set up initial scaling factors
-var scaleX = 10; // pixels per unit on x-axis
-var scaleY = 3; // pixels per unit on y-axis
-var offsetX = canvas.width / 3.7; // x-axis offset from left
-var offsetY = canvas.height / 2; // y-axis offset from top
+let scaleX = 10; 
+let scaleY = 3; 
+let offsetX = canvas.width / 3.7; 
+let offsetY = canvas.height / 2; 
 
-// Draw function
 function drawFunction() {
-  // Clear canvas
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw X and Y axes
@@ -231,18 +208,18 @@ function drawFunction() {
   ctx.moveTo(offsetX, 0);
   ctx.lineTo(offsetX, canvas.height);
   ctx.strokeStyle = "#757575";
-  ctx.lineWidth = 3; // Установите желаемую толщину осей
+  ctx.lineWidth = 3; 
   ctx.stroke();
 
   // Plot the function with dashed line
   ctx.beginPath();
-  ctx.setLineDash([9, 9]); // Устанавливаем паттерн для пунктирной линии
+  ctx.setLineDash([9, 9]); 
   ctx.lineWidth = 3;
   ctx.strokeStyle = "#757575";
-  for (var pixelX = 0; pixelX < canvas.width; pixelX++) {
-    var x = (pixelX - offsetX) / scaleX;
-    var y = f(x);
-    var pixelY = y * scaleY + offsetY;
+  for (let pixelX = 0; pixelX < canvas.width; pixelX++) {
+    let x = (pixelX - offsetX) / scaleX;
+    let y = f(x);
+    let pixelY = y * scaleY + offsetY;
     if (pixelX === 0) {
       ctx.moveTo(pixelX, pixelY);
     } else {
@@ -251,72 +228,71 @@ function drawFunction() {
   }
   ctx.stroke();
 
-  // Сбрасываем паттерн для пунктирной линии
+
   ctx.setLineDash([]);
 }
 
 // Initial draw
 drawFunction();
 
-// Add event listener for scaling using the mouse wheel
 canvas.addEventListener("wheel", function (event) {
-  event.preventDefault(); // Предотвращаем стандартное поведение браузера
-  var delta = event.deltaY;
+  event.preventDefault(); 
+  let delta = event.deltaY;
   if (delta < 0) {
     // Zoom in
-    scaleX *= 1.1; // эквивалетно scaleX = scaleX * 1.1
+    scaleX *= 1.1; 
     scaleY *= 1.1;
   } else {
     // Zoom out
     scaleX /= 1.1;
     scaleY /= 1.1;
   }
-  // Redraw function with new scale
+
   drawFunction();
 });
 
-// Переменная для хранения текущего смещения по оси y
-var yScrollOffset = 0;
 
-// Добавляем обработчик события для изменения смещения по оси y при скроллировании
+let yScrollOffset = 0;
+
+
 canvas.addEventListener("wheel", function (event) {
-  event.preventDefault(); // Предотвращаем стандартное поведение браузера
-  var delta = event.deltaY;
+  event.preventDefault(); 
+  let delta = event.deltaY;
   if (delta < 0) {
-    // Прокрутка вверх - уменьшаем смещение по оси y
-    yScrollOffset -= 5; // Например, на 10 пикселей
+
+    yScrollOffset -= 5; 
   } else {
-    // Прокрутка вниз - увеличиваем смещение по оси y
-    yScrollOffset += 25; // Например, на 10 пикселей
+
+    yScrollOffset += 25; 
   }
-  // Перерисовываем функцию с новым смещением по оси y
+
   drawFunction();
 });
 
 window.addEventListener("resize", function () {
-  // Update canvas dimensions
+
   canvas.width = canvas.parentElement.clientWidth;
   canvas.height = canvas.parentElement.clientHeight;
 
-  // Recalculate offsets to keep the origin fixed
+
   offsetX = canvas.width / 3.7;
   offsetY = canvas.height / 2;
 
-  // Redraw function with new dimensions
+
   drawFunction();
 });
 
 // ----------------------------------------------------------------------------------
 
-// Удаляющиеся кружки
-let circleCount = 0; // Счетчик созданных кружков
-const maxCircles = 40; // Максимальное количество кружков
-// Функция для добавления нового кружка
+
+let circleCount = 0;
+const maxCircles = 40; 
+
 function addCircle() {
-  if (circleCount >= maxCircles) return; // Проверяем, достигнут ли предел кружков
-  circleCount++; // Увеличиваем счетчик
+  if (circleCount >= maxCircles) return; 
+  circleCount++; 
   const circleContainer = document.querySelector(".line-with-rounds");
-  if (!circleContainer) return; // Проверяем существование контейнера
+  if (!circleContainer) return; 
   const circle = document.createElement("div");
   const outerCircle = document.createElement("div");
   const innerCircle = document.createElement("div");
@@ -325,7 +301,7 @@ function addCircle() {
   outerCircle.classList.add("outer-circle");
   innerCircle.classList.add("inner-circle");
 
-  const circleSize = 40; // Диаметр круга
+  const circleSize = 40; 
   const containerRect = circleContainer.getBoundingClientRect();
   const left = Math.random() * (containerRect.width - circleSize);
   const top = Math.random() * (containerRect.height - circleSize);
@@ -336,42 +312,39 @@ function addCircle() {
   circle.appendChild(innerCircle);
   circleContainer.appendChild(circle);
 
-  // Добавляем обработчик событий для удаления круга при клике
   circle.addEventListener("click", removeCircle);
 
-  // Добавляем случайные значения для изменения позиции
   setInterval(() => {
-    const deltaX = (Math.random() - 0.5) * 10; // Случайное значение для изменения позиции по горизонтали
-    const deltaY = (Math.random() - 0.5) * -10; // Случайное значение для изменения позиции по вертикали
+    const deltaX = (Math.random() - 0.5) * 10; 
+    const deltaY = (Math.random() - 0.5) * -10; 
     const circleRect = circle.getBoundingClientRect();
     const newLeft = circleRect.left + deltaX;
     const newTop = circleRect.top + deltaY;
-  }, 2500); // Обновляем позицию каждые 0.5 секунды
+  }, 2500); 
 }
 
 // Функция для удаления кружка при клике
 function removeCircle(event) {
   const innerCircle = event.target;
   const parentElement = innerCircle.parentNode;
-  if (!parentElement) return; // Проверяем существование родительского элемента
-  parentElement.removeChild(innerCircle); // Удаляем внутренний круг
-  parentElement.removeChild(parentElement.firstChild); // Удаляем внешний круг
+  if (!parentElement) return; 
+  parentElement.removeChild(innerCircle); 
+  parentElement.removeChild(parentElement.firstChild); 
 }
 
-// Добавляем новый кружок каждую секунду
 setInterval(addCircle, 1000);
 
 // --------------------------------------------------------------------------------------------------------
 
 // Слайдер
-var sliders = document.querySelectorAll(".slider");
+let sliders = document.querySelectorAll(".slider");
 
 sliders.forEach(function (slider) {
-  var out1 = slider.querySelector(".plugout, .plugout2");
-  var sliderRect = slider.getBoundingClientRect();
+  let out1 = slider.querySelector(".plugout, .plugout2");
+  let sliderRect = slider.getBoundingClientRect();
 
-  // Генерация случайного положения plugout только по горизонтали
-  var randomLeft = Math.random() * (sliderRect.width - out1.offsetWidth);
+  // Генерация случайного положения plugout
+  let randomLeft = Math.random() * (sliderRect.width - out1.offsetWidth);
   out1.style.left =
     Math.max(
       20,
@@ -392,21 +365,18 @@ sliders.forEach(function (slider) {
   }
 
   function updatePosition(clientX) {
-    var sliderRect = slider.getBoundingClientRect();
-    var newLeft = clientX - sliderRect.left;
-    // var newLeft = sliderRect.width - out1.offsetWidth + 20;
-    var rightLimit = sliderRect.width - out1.offsetWidth + 20;
-    // var leftLimit = 20;
+    let sliderRect = slider.getBoundingClientRect();
+    let newLeft = clientX - sliderRect.left;
+    // let newLeft = sliderRect.width - out1.offsetWidth + 20;
+    let rightLimit = sliderRect.width - out1.offsetWidth + 20;
+    // let leftLimit = 20;
 
-    // Проверка, чтобы plugout не выезжал за пределы слайдера справа
     if (newLeft <= 12) {
       out1.style.left = 12 + "px";
     }
-    // Проверка, чтобы plugout не выезжал за пределы слайдера слева
     else if (newLeft >= rightLimit) {
       out1.style.left = rightLimit + "px";
     }
-    // В противном случае позволяется перемещение plugout
     else {
       out1.style.left = newLeft - out1.offsetWidth / 2 + "px";
     }

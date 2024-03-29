@@ -45,28 +45,18 @@ section:first-of-type {
   margin-top: 0.5%;
   margin-left: 0.5%;
   aspect-ratio: 1.5;
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 1fr); */
-  /* align-content: space-between; */
   border: #757575 3px solid;
   border-radius: 5px;
   position: absolute;
   overflow: hidden;
 }
 
-/* .circle {
-  width: 20px;
-  height: 20px;
-  background-color: #757575;
-  border-radius: 50%;
-  position: absolute;
-  animation: fadeInOut 10s ease-in-out; 
-} */
+
 
 .left-controller {
-  display: flex; /* Используем flex-контейнер */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   position: absolute;
   background: url(../images/hand_raight.svg) center / contain no-repeat;
   height: 62%;
@@ -79,13 +69,12 @@ section:first-of-type {
   font-family: "Helvetica_bold";
   font-size: 1vw;
   text-align: center;
-  /* transform: translate(1% 0px); */
 }
 
 .right-controller {
-  display: flex; /* Используем flex-контейнер */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   position: absolute;
   background: url(../images/hand_raight.svg) center / contain no-repeat;
   height: 62%;
@@ -120,24 +109,20 @@ section:first-of-type {
 }
 
 .arrows_and_cloud {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   background: url(../images/arrowsAndCloud.svg) center / contain no-repeat;
   position: relative;
   height: 75%;
   width: 100%;
   top: 6%;
-  /* left: 52%; */
   max-height: 100%;
   max-width: 100%;
   bottom: 0;
 }
 
 .eei-letter {
-  display: flex; /* Используем flex-контейнер */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   position: absolute;
   height: 10%;
   width: 14%;
@@ -155,9 +140,9 @@ section:first-of-type {
 }
 
 .error-letter {
-  display: flex; /* Используем flex-контейнер */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   position: absolute;
   height: 10%;
   width: 10%;
@@ -165,24 +150,13 @@ section:first-of-type {
   left: 43%;
   max-height: 100%;
   max-width: 100%;
-  /* bottom: 0; */
   transform: translate(28%, 20%);
-  /* width: 31ch; */
   color: #757575;
   font-family: "Helvetica_bold";
   font-size: 3.5vw;
   text-align: center;
 }
 
-/* .first-section {
-  width: 100%;
-  height: 75vh;
-  max-height: 100%;
-  max-width: 100%;
-  background-color: #cbcbcb;
-  border: #757575 4px solid;
-  border-radius: 5px;
-} */
 
 .display-flex {
   display: flex;
@@ -196,7 +170,6 @@ section:first-of-type {
   border-radius: 50%;
   width: 1vw;
   height: 1vw;
-  /* background-color: #757575; */
   margin: 1.1vw;
   border: 10px solid transparent;
   box-shadow: 0 0 0 4px #757575;
@@ -208,7 +181,6 @@ section:first-of-type {
   height: 0.8vw;
   background-color: #757575;
   margin: -0.4vw;
-  /* margin-left: 0.1vw; */
 }
 
 .special-nails {
@@ -216,8 +188,6 @@ section:first-of-type {
   height: 2.1vw;
   margin-top: 0.6vw;
   margin-left: 5vw;
-  /* transform: translate(2% 5%); */
-  /* border: red solid; */
 }
 
 .plugout2 {
@@ -270,7 +240,6 @@ section:nth-of-type(2) {
   border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* align-content: space-between; */
   position: absolute;
   border-radius: 5px;
 }
@@ -304,9 +273,9 @@ section:nth-of-type(2) {
 }
 
 .first-kubik {
-  display: flex; /* Используем flex-контейнер */
-  justify-content: center; /* Центрируем по горизонтали */
-  align-items: center; /* Центрируем по вертикали */
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
   background: url(../images/ctrlZButton.svg) center / contain no-repeat;
   height: 73%;
   width: 74%;
@@ -316,7 +285,6 @@ section:nth-of-type(2) {
   max-width: 100%;
   bottom: 0;
   transform: translate(28%, 20%);
-  /* width: 31ch; */
   color: #757575;
   font-family: "Helvetica_bold";
   font-size: 3.5vw;
@@ -336,7 +304,6 @@ section:nth-of-type(2) {
   max-width: 100%;
   bottom: 0;
   transform: translate(10%, 20%);
-  /* width: 31ch; */
   color: #757575;
   font-family: "Helvetica_bold";
   font-size: 3.5vw;
@@ -432,7 +399,7 @@ section:nth-of-type(2) {
   width: 17vw;
   height: 17vw;
   border-radius: 50%;
-  position: relative; /* Позиционируем относительно родительского элемента */
+  position: relative; 
   border: #757575 3px solid;
 }
 
@@ -446,7 +413,7 @@ section:nth-of-type(2) {
   border: #757575 3px solid;
   display: flex;
   justify-content: center;
-  align-items: center; /* Выравнивание по центру */
+  align-items: center; 
 }
 
 .circle-arrow {
@@ -560,16 +527,11 @@ section:nth-of-type(2) {
 .falling-text {
   position: relative;
   z-index: 1;
-  color: #757575; /* Цвет текста внутри кругов */
-  font-size: 50px; /* Размер шрифта */
-  font-weight: bold; /* Жирный шрифт */
+  color: #757575; 
+  font-size: 50px; 
+  font-weight: bold; 
 }
-/* 
-.falling-image {
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain; 
-} */
+
 
 /* ------ */
 
@@ -623,7 +585,6 @@ section:nth-of-type(2) .popup {
   width: 98%;
   height: 96%;
   aspect-ratio: 2.3;
-  /* background-color: #cbcbcb; */
   left: 1%;
   top: 2%;
   display: grid;
@@ -643,10 +604,7 @@ section:nth-of-type(2) .popup {
   max-width: 100%;
   max-height: 100%;
   text-align: center;
-  /* flex-wrap: wrap; */
-  /* white-space: nowrap; */
   overflow: hidden;
-  /* z-index: 4; */
 }
 
 .span0 {
@@ -742,7 +700,6 @@ section:nth-of-type(3) span:nth-of-type(2)::after {
   content: "";
   top: calc(1.8vw - 3px);
   left: calc(((var(--padding-border) + 9.7vw) * 1));
-  /* bottom: calc(((var(--padding-border) + 2.8vw) * -1) + 2vw); */
   border-top: 0.2vw solid #757575;
   border-left: 0.2vw solid #757575;
   border-right: 0.2vw solid #757575;
@@ -845,43 +802,24 @@ section:nth-of-type(3) span:first-of-type::before {
   top: 1.5%;
   position: absolute;
   border: #757575 3px solid;
-  /* display: grid; */
-  /* Установим 7 строк */
-  /* grid-template-rows: repeat(7, 1fr); */
-  /* Теперь колонка будет одна, а строки будут 7 */
-  /* grid-template-columns: 1fr; */
-  /* Убираем выравнивание содержимого между строками */
-  /* align-content: unset; */
-  /* Убираем отступы между прямоугольниками */
-  /* grid-gap: 0; */
   border-radius: 5px;
 }
 
 .border-rowitem-inside {
   width: 100%;
   height: 77%;
-  /* left: 0.55%; */
   top: 11.5%;
   position: absolute;
-  /* border: #757575 4px solid; */
   display: grid;
-  /* Установим 7 строк */
   grid-template-rows: repeat(7, 1fr);
-  /* Теперь колонка будет одна, а строки будут 7 */
   grid-template-columns: 1fr;
-  /* Убираем выравнивание содержимого между строками */
   align-content: unset;
-  /* Убираем отступы между прямоугольниками */
   grid-gap: 0;
-  /* border-radius: 5px; */
 }
 
 .rectangle {
-  /* Ширина 100%, чтобы занимать всю ширину колонки */
   width: 100%;
-  /* Одинаковая высота для каждого прямоугольника */
   height: 100%;
-  /* border-bottom: 4px solid red; */
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -902,7 +840,6 @@ section:nth-of-type(3) span:first-of-type::before {
 }
 
 .plugin {
-  /* background-image: url("src/img/plug_in_1.svg"); */
   width: 10%;
   height: 10%;
   background-size: contain;
@@ -919,7 +856,6 @@ section:nth-of-type(3) span:first-of-type::before {
   position: absolute;
 }
 
-/* Убираем нижнюю границу у последнего прямоугольника */
 .rectangle:last-child {
   border-bottom: none;
 }
@@ -933,8 +869,6 @@ section:nth-of-type(3) span:first-of-type::before {
   border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* align-content: space-between; */
-  /* border-radius: 5px; */
   grid-gap: 0;
 }
 
@@ -1009,7 +943,6 @@ section:nth-of-type(3) span:first-of-type::before {
   max-height: 105%;
   max-width: 115%;
   transform: translate(-6%, -5%);
-  /* transform: translate(0px, -3%) rotate(90deg); */
 }
 
 .with-image-up1_9 {
@@ -1045,7 +978,6 @@ section:nth-of-type(3) span:first-of-type::before {
   border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* align-content: space-between; */
   border-radius: 5px;
   grid-gap: 0;
 }
@@ -1128,7 +1060,6 @@ section:nth-of-type(3) span:first-of-type::before {
   border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* align-content: space-between; */
   border-radius: 5px;
   grid-gap: 0;
 }
@@ -1141,7 +1072,6 @@ section:nth-of-type(3) span:first-of-type::before {
 }
 
 .with-image-right {
-  /* position: absolute; */
   background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
   display: flex;
   justify-content: center;
@@ -1153,12 +1083,9 @@ section:nth-of-type(3) span:first-of-type::before {
   max-height: 100%;
   max-width: 100%;
   transform: translate(24%, 0px);
-  /* bottom: 0;
-  transform: translate(-50%, -50%); */
 }
 
 .with-image-right2 {
-  /* position: absolute; */
   background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
   display: flex;
   justify-content: center;
@@ -1170,12 +1097,10 @@ section:nth-of-type(3) span:first-of-type::before {
   max-height: 100%;
   max-width: 100%;
   transform: translate(24%, 0px);
-  /* bottom: 0;
-    transform: translate(-50%, -50%); */
+
 }
 
 .with-image-right3 {
-  /* position: absolute; */
   background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
   display: flex;
   justify-content: center;
@@ -1187,12 +1112,9 @@ section:nth-of-type(3) span:first-of-type::before {
   max-height: 100%;
   max-width: 100%;
   transform: translate(24%, 0px);
-  /* bottom: 0;
-      transform: translate(-50%, -50%); */
 }
 
 .with-image-left {
-  /* position: absolute; */
   background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
   display: flex;
   justify-content: center;
@@ -1200,14 +1122,12 @@ section:nth-of-type(3) span:first-of-type::before {
   width: 82%;
   height: 100%;
   top: 7%;
-  /* left: 6%; */
   max-height: 100%;
   max-width: 100%;
   transform: rotate(180deg);
 }
 
 .with-image-left2 {
-  /* position: absolute; */
   background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
   display: flex;
   justify-content: center;
@@ -1215,14 +1135,12 @@ section:nth-of-type(3) span:first-of-type::before {
   width: 82%;
   height: 100%;
   top: 41%;
-  /* left: 6%; */
   max-height: 100%;
   max-width: 100%;
   transform: rotate(180deg);
 }
 
 .with-image-left3 {
-  /* position: absolute; */
   background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
   display: flex;
   justify-content: center;
@@ -1230,7 +1148,6 @@ section:nth-of-type(3) span:first-of-type::before {
   width: 82%;
   height: 100%;
   top: 74%;
-  /* left: 6%; */
   max-height: 100%;
   max-width: 100%;
   transform: rotate(180deg);
@@ -1249,7 +1166,6 @@ section:nth-of-type(3) span:first-of-type::before {
 
 .flip-line {
   transform: rotate(90deg);
-  /* border: 3px solid #cbcbcb; */
 }
 
 .square3:nth-child(3n) {
@@ -1260,31 +1176,6 @@ section:nth-of-type(3) span:first-of-type::before {
   border-bottom: none;
 }
 
-/* #square1_4 {
-  background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
-  position: absolute;
-  height: 30%;
-  width: 30%;
-  top: 7%;
-  left: 52%;
-  max-height: 100%;
-  max-width: 100%;
-  bottom: 0;
-  transform: translate(-50%, -50%);
-}
-
-#square3_4 {
-  background: url(../images/emptyDoubleRound.svg) center / contain no-repeat;
-  position: absolute;
-  height: 30%;
-  width: 30%;
-  top: 7%;
-  left: 52%;
-  max-height: 100%;
-  max-width: 100%;
-  bottom: 0;
-  transform: rotate(-180deg);
-} */
 
 section:nth-of-type(4) {
   display: flex;
@@ -1307,9 +1198,6 @@ section:nth-of-type(4) {
   left: 0.5%;
   top: 1%;
   border: #757575 3px solid;
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 1fr); */
-  /* align-content: space-between; */
   position: absolute;
   border-radius: 5px;
 }
@@ -1317,9 +1205,9 @@ section:nth-of-type(4) {
 /* График функции */
 
 canvas {
-  width: 100%; /* Ширина canvas равна 100% ширины родительского div */
-  height: 100%; /* Высота canvas равна 100% высоты родительского div */
-  display: block; /* Разрешаем использование относительных единиц измерения */
+  width: 100%; 
+  height: 100%; 
+  display: block; 
 }
 
 .roundCrossXY {
@@ -1332,11 +1220,9 @@ canvas {
   max-height: 100%;
   max-width: 100%;
   bottom: 0;
-  /* transform: translate(-50%, -50%); */
 }
 
 .upperTitle {
-  /* background: url(../images/roundWithCross.svg) center / contain no-repeat; */
   position: absolute;
   height: 26%;
   width: 9%;
@@ -1349,11 +1235,9 @@ canvas {
   font-family: "Helvetica_bold";
   font-size: 2vw;
   text-align: center;
-  /* transform: translate(-50%, -50%); */
 }
 
 .downTitle {
-  /* background: url(../images/roundWithCross.svg) center / contain no-repeat; */
   position: absolute;
   height: 26%;
   width: 9%;
@@ -1366,7 +1250,6 @@ canvas {
   font-family: "Helvetica_bold";
   font-size: 2vw;
   text-align: center;
-  /* transform: translate(-50%, -50%); */
 }
 
 /* Круги с ABC */
@@ -1404,7 +1287,7 @@ canvas {
   border-radius: 50%;
   position: relative;
   border: #757575 3px solid;
-  transition: transform 0.5s ease; /* Добавляем переход для плавного изменения трансформации */
+  transition: transform 0.5s ease; 
   display: flex;
   justify-content: center;
   color: #757575;
@@ -1448,7 +1331,7 @@ canvas {
   border-radius: 50%;
   position: relative;
   border: #757575 3px solid;
-  transition: transform 0.5s ease; /* Добавляем переход для плавного изменения трансформации */
+  transition: transform 0.5s ease; 
   display: flex;
   justify-content: center;
   color: #757575;
@@ -1551,7 +1434,7 @@ canvas {
   left: 16.5%;
   border: #757575 3px solid;
   border-radius: 5px;
-  overflow: hidden; /* Обрезать лишние кружки, которые выходят за пределы блока */
+  overflow: hidden; 
 }
 
 .line-with-rounds {
@@ -1560,7 +1443,6 @@ canvas {
   height: 99%;
   top: 0.5%;
   left: 0.5%;
-  /* overflow: hidden; */
   border: #757575 3px solid;
   border-radius: 5px;
 }
@@ -1576,9 +1458,8 @@ canvas {
 
 .round {
   position: absolute;
-  width: 30px; /* Диаметр круга */
-  height: 30px; /* Диаметр круга */
-  /* border-radius: 50%; */
+  width: 30px; 
+  height: 30px; 
   animation: float 10s infinite;
 }
 
@@ -1586,17 +1467,16 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 3px solid #757575; /* Стиль внешнего круга */
+  border: 3px solid #757575; 
   border-radius: 50%;
   background-color: #cbcbcb;
-  /* box-sizing: border-box; */
 }
 
 .inner-circle {
   position: absolute;
-  width: 50%; /* Размер внутреннего круга */
-  height: 50%; /* Размер внутреннего круга */
-  background-color: #757575; /* Цвет внутреннего круга */
+  width: 50%; 
+  height: 50%; 
+  background-color: #757575; 
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -1623,9 +1503,6 @@ section:nth-of-type(5) {
   margin-top: 0.3%;
   margin-left: 0.4%;
   aspect-ratio: 1.5;
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-content: space-between; */
   border: #757575 3px solid;
   border-radius: 5px;
   position: absolute;
