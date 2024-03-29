@@ -197,7 +197,7 @@ section:first-of-type {
   width: 1vw;
   height: 1vw;
   /* background-color: #757575; */
-  margin: 1.3vw;
+  margin: 1.1vw;
   border: 10px solid transparent;
   box-shadow: 0 0 0 4px #757575;
 }
@@ -1513,6 +1513,33 @@ canvas {
   content: "";
   transform: rotate(-90deg);
 }
+
+.upschema2 {
+    background: url(../images/part.svg) center / contain no-repeat;
+    position: absolute;
+    height: 13%;
+    width: 35%;
+    top: 7%;
+    left: 52%;
+    max-height: 100%;
+    max-width: 100%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  .downschema2 {
+    background: url(../images/part.svg) center / contain no-repeat;
+    position: absolute;
+    height: 13%;
+    width: 34%;
+    top: 86.5%;
+    left: 35%;
+    max-height: 100%;
+    max-width: 100%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    transform: rotate(180deg);
+  }
 
 /* шарики в линии */
 

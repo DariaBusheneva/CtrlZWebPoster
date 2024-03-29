@@ -163,22 +163,22 @@ stackCircles();
 
 // Включение лампочек
 document.addEventListener("DOMContentLoaded", function () {
-  const kubik = document.getElementById("kubikON");
+  const kubik1 = document.getElementById("kubikON");
   const lighters = document.getElementById("lighters");
 
   // Добавляем обработчик события клика по кубику
-  kubik.addEventListener("click", function () {
+  kubik1.addEventListener("click", function () {
     // Меняем фоновое изображение другого div при клике на кубик
     lighters.style.backgroundImage = "url(images/lightOn.svg)";
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const kubik = document.getElementById("kubikOFF");
+  const kubik1 = document.getElementById("kubikOFF");
   const lighters = document.getElementById("lighters");
 
   // Добавляем обработчик события клика по кубику
-  kubik.addEventListener("click", function () {
+  kubik1.addEventListener("click", function () {
     // Меняем фоновое изображение другого div при клике на кубик
     lighters.style.backgroundImage = "url(images/lightDarker.svg)";
   });
@@ -467,8 +467,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   kubik.addEventListener("click", function () {
     kubik.style.backgroundImage = "url(images/connect.svg)";
-    kubik.style.width = "68%"; // Пример установки ширины
-    kubik.style.height = "103%"; // Пример установки высоты
+    kubik.style.width = "68%"; 
+    kubik.style.height = "103%"; 
     kubik.style.transform = "translate(49%, 3%) rotate(-90deg)";
   });
 });
@@ -477,8 +477,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const kubik = document.getElementById("square2_3");  
     kubik.addEventListener("click", function () {
       kubik.style.backgroundImage = "url(images/connect.svg)";
-      kubik.style.width = "68%"; // Пример установки ширины
-      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.width = "68%"; 
+      kubik.style.height = "103%"; 
       kubik.style.transform = "translate(49%, 3%) rotate(-90deg)";
     });
   });
@@ -487,8 +487,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const kubik = document.getElementById("square3_3");  
     kubik.addEventListener("click", function () {
       kubik.style.backgroundImage = "url(images/connect.svg)";
-      kubik.style.width = "68%"; // Пример установки ширины
-      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.width = "68%"; 
+      kubik.style.height = "103%"; 
       kubik.style.transform = "translate(24%, 20%)";
     });
   });
@@ -497,8 +497,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const kubik = document.getElementById("square4_3");  
     kubik.addEventListener("click", function () {
       kubik.style.backgroundImage = "url(images/connect.svg)";
-      kubik.style.width = "68%"; // Пример установки ширины
-      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.width = "68%"; 
+      kubik.style.height = "103%"; 
       kubik.style.transform = "translate(24%, -13%) rotate(180deg)";
     });
   });
@@ -509,8 +509,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
     kubik.addEventListener("click", function () {
       kubik.style.backgroundImage = "url(images/connect.svg)";
-      kubik.style.width = "68%"; // Пример установки ширины
-      kubik.style.height = "103%"; // Пример установки высоты
+      kubik.style.width = "68%"; 
+      kubik.style.height = "103%"; 
       kubik.style.transform = "translate(24%, 20%)";
       letterB.style.height = "56%"
       letterB.style.transform = "translate(0px, -29%)"
