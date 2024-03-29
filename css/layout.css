@@ -197,7 +197,7 @@ section:first-of-type {
   width: 1vw;
   height: 1vw;
   /* background-color: #757575; */
-  margin: 1vw;
+  margin: 1.3vw;
   border: 10px solid transparent;
   box-shadow: 0 0 0 4px #757575;
 }
@@ -214,7 +214,7 @@ section:first-of-type {
 .special-nails {
   width: 8.1vw;
   height: 2.1vw;
-  margin-top: 1vw;
+  margin-top: 0.6vw;
   margin-left: 5vw;
   /* transform: translate(2% 5%); */
   /* border: red solid; */
@@ -264,9 +264,9 @@ section:nth-of-type(2) {
 
 .second-border-firstdiv {
   width: 99%;
-  height: 96%;
+  height: 98%;
   left: 0.5%;
-  top: 2%;
+  top: 1%;
   border: #757575 3px solid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -415,9 +415,9 @@ section:nth-of-type(2) {
 
 .second-border-seconddiv {
   width: 99%;
-  height: 96%;
+  height: 98%;
   left: 0.5%;
-  top: 2%;
+  top: 1%;
   position: absolute;
   border: #757575 3px solid;
   display: grid;
@@ -1296,16 +1296,16 @@ section:nth-of-type(4) {
   justify-content: space-between;
   z-index: 2;
   width: 100%;
-  height: 90vh;
+  height: 86vh;
   max-height: 100%;
   max-width: 100%;
 }
 
 .second-border-firstdiv2 {
   width: 99%;
-  height: 96%;
+  height: 98%;
   left: 0.5%;
-  top: 2%;
+  top: 1%;
   border: #757575 3px solid;
   /* display: grid; */
   /* grid-template-columns: repeat(2, 1fr); */
